@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S7b-gI-wTz">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="liv-bB-uiE">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="S7b-gI-wTz" customClass="SplashViewController" customModule="WeatherRx" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N84-vH-obc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="BdT-82-00b">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3s-Te-MzX">
+                                <rect key="frame" x="135" y="587.5" width="144.5" height="35"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pogo_weather_logo" translatesAutoresizingMaskIntoConstraints="NO" id="HFh-ZR-3qg">
+                                <rect key="frame" x="40" y="637.5" width="334" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Vfj-RY-AMw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HFh-ZR-3qg" firstAttribute="leading" secondItem="b8B-gD-ZSN" secondAttribute="leading" constant="40" id="2f1-pm-Aka"/>
+                            <constraint firstItem="HFh-ZR-3qg" firstAttribute="top" secondItem="e3s-Te-MzX" secondAttribute="bottom" constant="15" id="PxW-Rz-LVW"/>
+                            <constraint firstItem="e3s-Te-MzX" firstAttribute="centerY" secondItem="N84-vH-obc" secondAttribute="centerY" multiplier="1.35" id="R3u-mx-Wmd"/>
+                            <constraint firstItem="b8B-gD-ZSN" firstAttribute="trailing" secondItem="HFh-ZR-3qg" secondAttribute="trailing" constant="40" id="Y8r-O7-2ey"/>
+                            <constraint firstItem="BdT-82-00b" firstAttribute="top" secondItem="N84-vH-obc" secondAttribute="top" id="Yi4-mE-EYR"/>
+                            <constraint firstAttribute="bottom" secondItem="BdT-82-00b" secondAttribute="bottom" id="dba-kk-EP6"/>
+                            <constraint firstItem="BdT-82-00b" firstAttribute="trailing" secondItem="N84-vH-obc" secondAttribute="trailing" id="qrX-gO-phH"/>
+                            <constraint firstItem="b8B-gD-ZSN" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HFh-ZR-3qg" secondAttribute="bottom" constant="20" id="x7J-xj-vYh"/>
+                            <constraint firstItem="e3s-Te-MzX" firstAttribute="centerX" secondItem="N84-vH-obc" secondAttribute="centerX" id="yia-jR-xFM"/>
+                            <constraint firstItem="BdT-82-00b" firstAttribute="leading" secondItem="N84-vH-obc" secondAttribute="leading" id="zSX-qW-B6q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b8B-gD-ZSN"/>
+                    </view>
+                    <connections>
+                        <outlet property="poweredLabel" destination="e3s-Te-MzX" id="hyc-NW-EwG"/>
+                        <outlet property="sponsorImageView" destination="HFh-ZR-3qg" id="BQ4-D6-7ke"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7pV-qN-LBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210.1449275362319" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Splash" width="414" height="896"/>
+        <image name="pogo_weather_logo" width="800" height="253"/>
+    </resources>
+</document>
